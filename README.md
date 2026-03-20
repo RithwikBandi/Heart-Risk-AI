@@ -15,12 +15,6 @@ Enter 8 health parameters. Receive an instant ML risk classification with SHAP-b
 [![TailwindCSS](https://img.shields.io/badge/Tailwind-3.4-38BDF8?style=flat-square&logo=tailwindcss&logoColor=white)](https://tailwindcss.com)
 [![License](https://img.shields.io/badge/License-Academic-6366F1?style=flat-square)](./LICENSE)
 
-[**Live Demo**](#) · [**Case Study**](#) · [**API Docs**](http://localhost:8000/docs) · [**Report a Bug**](#)
-
----
-
-![CardioAI Landing Page](https://drive.google.com/file/d/1fziZib4aPM8shMbT2phj12V8xD3A867t/view)
-
 </div>
 
 ---
