@@ -1,0 +1,282 @@
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* ── Light mode design tokens ── */
+  :root {
+    --bg-page:       #f8fafc;
+    --bg-subtle:     #f1f5f9;
+    --surface:       #ffffff;
+    --surface-2:     #f8fafc;
+    --surface-3:     #f1f5f9;
+    --surface-input: #ffffff;
+    --border:        rgba(148, 163, 184, 0.18);
+    --border-strong: rgba(148, 163, 184, 0.35);
+    --border-input:  #e2e8f0;
+    --text-primary:  #0f172a;
+    --text-secondary:#475569;
+    --text-muted:    #94a3b8;
+    --text-label:    #374151;
+    --wave-fill:     #f8fafc;
+    --radius-sm:     8px;
+    --radius-md:     12px;
+    --radius-lg:     16px;
+    --radius-xl:     24px;
+    --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.06), 0 1px 2px rgba(15, 23, 42, 0.04);
+    --shadow-md: 0 4px 16px rgba(15, 23, 42, 0.08), 0 2px 6px rgba(15, 23, 42, 0.04);
+    --shadow-lg: 0 8px 32px rgba(15, 23, 42, 0.10), 0 4px 12px rgba(15, 23, 42, 0.05);
+    --shadow-blue:   0 4px 24px rgba(37, 99, 235, 0.15);
+  }
+
+  /* ── Dark mode design tokens ── */
+  .dark {
+    --bg-page:       #0a0f1e;
+    --bg-subtle:     #111827;
+    --surface:       #141c2e;
+    --surface-2:     #0f172a;
+    --surface-3:     #1e293b;
+    --surface-input: #1a2336;
+    --border:        rgba(148, 163, 184, 0.08);
+    --border-strong: rgba(148, 163, 184, 0.14);
+    --border-input:  #1e2d45;
+    --text-primary:  #f0f4ff;
+    --text-secondary:#8b9cc8;
+    --text-muted:    #4a5880;
+    --text-label:    #a8b8d8;
+    --wave-fill:     #0a0f1e;
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.5), 0 1px 2px rgba(0, 0, 0, 0.4);
+    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.5), 0 2px 6px rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.6), 0 4px 12px rgba(0, 0, 0, 0.4);
+  }
+
+  * { box-sizing: border-box; }
+
+  html {
+    scroll-behavior: smooth;
+    color-scheme: light;
+    transition: color-scheme 0.01ms;
+  }
+  html.dark {
+    color-scheme: dark;
+  }
+
+  /* ── Body — uses CSS variable, responds instantly to .dark on <html> ── */
+  body {
+    font-family: "DM Sans", system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: var(--bg-page);
+    color: var(--text-primary);
+    line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  #root {
+    min-height: 100vh;
+    width: 100%;
+    background-color: var(--bg-page);
+    transition: background-color 0.3s ease;
+  }
+
+  h1, h2, h3, h4, h5 {
+    font-family: "Sora", system-ui, sans-serif;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+  }
+}
+
+@layer components {
+
+  /* ── Primary button ── */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm text-white transition-all duration-200;
+    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+    box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35);
+  }
+  .btn-primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(37, 99, 235, 0.45);
+  }
+  .btn-primary:active  { transform: translateY(0); }
+  .btn-primary:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+  }
+
+  /* ── Secondary button ── */
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm transition-all duration-200;
+    background: var(--surface);
+    color: var(--text-primary);
+    border: 1px solid var(--border-strong);
+    box-shadow: var(--shadow-sm);
+  }
+  .btn-secondary:hover {
+    border-color: #3b82f6;
+    color: #2563eb;
+    box-shadow: var(--shadow-md);
+    transform: translateY(-1px);
+  }
+
+  /* ── Card — responds to dark mode via CSS variable ── */
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.2s ease;
+  }
+
+  /* ── Glass card ── */
+  .glass-card {
+    background: rgba(255, 255, 255, 0.82);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 255, 255, 0.55);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+  }
+  .dark .glass-card {
+    background: rgba(20, 28, 46, 0.88);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+  }
+
+  /* ── Input field ── */
+  .input-field {
+    @apply w-full rounded-xl px-4 py-3 text-sm transition-all duration-200 focus:outline-none;
+    background: var(--surface-input);
+    color: var(--text-primary);
+    border: 1.5px solid var(--border-input);
+    box-shadow: 0 1px 3px rgba(15, 23, 42, 0.04);
+  }
+  .input-field::placeholder { color: var(--text-muted); }
+  .input-field:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.12);
+  }
+  .input-field.error {
+    border-color: #ef4444;
+    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+  }
+
+  /* ── Form label ── */
+  .form-label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin-bottom: 0.375rem;
+    color: var(--text-label);
+    transition: color 0.3s ease;
+  }
+
+  /* ── Section label ── */
+  .section-label {
+    @apply text-xs font-semibold uppercase tracking-widest;
+    color: #3b82f6;
+  }
+
+  /* ── Tag ── */
+  .tag {
+    @apply inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold;
+  }
+}
+
+@layer utilities {
+  /* ── Animations ── */
+  .animate-fade-in    { animation: fadeIn 0.5s ease-out forwards; }
+  .animate-fade-up    { animation: fadeUp 0.5s ease-out forwards; opacity: 0; }
+  .animate-slide-in   { animation: slideIn 0.4s ease-out forwards; }
+  .animate-scale-in   { animation: scaleIn 0.3s ease-out forwards; }
+  .animate-pulse-slow { animation: pulseSlow 3s ease-in-out infinite; }
+
+  @keyframes fadeIn     { from { opacity: 0; }                               to { opacity: 1; } }
+  @keyframes fadeUp     { from { opacity: 0; transform: translateY(16px); }  to { opacity: 1; transform: translateY(0); } }
+  @keyframes slideIn    { from { opacity: 0; transform: translateX(-12px); } to { opacity: 1; transform: translateX(0); } }
+  @keyframes scaleIn    { from { opacity: 0; transform: scale(0.95); }       to { opacity: 1; transform: scale(1); } }
+  @keyframes pulseSlow  { 0%, 100% { opacity: 1; transform: scale(1); }    50% { opacity: 0.7; transform: scale(1.02); } }
+  @keyframes dropdownOpen { from { opacity: 0; transform: scale(0.96) translateY(-4px); } to { opacity: 1; transform: scale(1) translateY(0); } }
+  @keyframes shimmer    { 0% { background-position: -200% 0; }              100% { background-position: 200% 0; } }
+  @keyframes progressFill { from { width: 0%; } to { width: var(--target-width); } }
+
+  /* ── Skeleton ── */
+  .skeleton {
+    background: linear-gradient(90deg, #f1f5f9 25%, #e2e8f0 50%, #f1f5f9 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+  }
+  .dark .skeleton {
+    background: linear-gradient(90deg, #141c2e 25%, #1e293b 50%, #141c2e 75%);
+    background-size: 200% 100%;
+  }
+
+  /* ── Gradient text ── */
+  .gradient-text {
+    background: linear-gradient(135deg, #2563eb, #7c3aed);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* ── Scrollbar ── */
+  .scrollbar-hide::-webkit-scrollbar { display: none; }
+  .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+
+  /* ─────────────────────────────────────────────────────────
+     PRODUCTION DARK MODE OVERRIDES
+     These catch hardcoded Tailwind classes used throughout
+     the app without requiring each file to be edited.
+     Uses specificity + transition for smooth switching.
+  ───────────────────────────────────────────────────────── */
+
+  /* Page background */
+  .dark .bg-\[#f8fafc\]  { background-color: var(--bg-page) !important; }
+  .dark .bg-\[#fafafa\]  { background-color: var(--bg-page) !important; }
+  .dark .bg-slate-50     { background-color: var(--bg-page) !important; }
+
+  /* Surface whites */
+  .dark .bg-white        {
+    background-color: var(--surface) !important;
+    transition: background-color 0.3s ease;
+  }
+
+  /* Text hierarchy */
+  .dark .text-slate-900  { color: var(--text-primary)   !important; }
+  .dark .text-slate-800  { color: #dde5f4               !important; }
+  .dark .text-slate-700  { color: #b8c8e8               !important; }
+  .dark .text-slate-600  { color: var(--text-secondary)  !important; }
+  .dark .text-slate-500  { color: var(--text-muted)      !important; }
+  .dark .text-slate-400  { color: #3d4f70               !important; }
+
+  /* Borders */
+  .dark .border-slate-200 { border-color: var(--border-strong) !important; }
+  .dark .border-slate-100 { border-color: var(--border)        !important; }
+  .dark .border-gray-200  { border-color: var(--border-strong) !important; }
+
+  /* Journey section bg — override from-[#f0f4ff] */
+  .dark .from-\[#f0f4ff\] { --tw-gradient-from: #0f172a !important; }
+  .dark .to-\[#f8fafc\]   { --tw-gradient-to:   #0a0f1e !important; }
+
+  /* Info banners used in app pages */
+  .dark .bg-\[#f0f9ff\] {
+    background-color: rgba(14, 165, 233, 0.07) !important;
+    border-color: rgba(14, 165, 233, 0.18) !important;
+  }
+  .dark .text-sky-900 { color: #7dd3fc !important; }
+  .dark .text-sky-700 { color: #38bdf8 !important; }
+
+  /* Global transition for all surface elements */
+  .dark * {
+    transition-property: background-color, border-color, color;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+  }
+  /* But don't override animation/transform transitions */
+  .dark [style*="transition"] {
+    transition: inherit;
+  }
+}

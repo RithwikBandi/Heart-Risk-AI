@@ -1,0 +1,77 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  darkMode: "class",
+  theme: {
+    extend: {
+      fontFamily: {
+        sans: ["DM Sans", "system-ui", "sans-serif"],
+        display: ["Sora", "system-ui", "sans-serif"],
+      },
+      colors: {
+        brand: {
+          50:  "#eff6ff",
+          100: "#dbeafe",
+          200: "#bfdbfe",
+          300: "#93c5fd",
+          400: "#60a5fa",
+          500: "#3b82f6",
+          600: "#2563eb",
+          700: "#1d4ed8",
+          800: "#1e40af",
+          900: "#1e3a8a",
+        },
+        navy: "#0f172a",
+      },
+      animation: {
+        "fade-in":    "fadeIn 0.5s ease-out forwards",
+        "fade-up":    "fadeUp 0.5s ease-out forwards",
+        "slide-in":   "slideIn 0.4s ease-out forwards",
+        "scale-in":   "scaleIn 0.3s ease-out forwards",
+        "dropdown":   "dropdownOpen 0.2s ease-out both",
+        "pulse-slow": "pulseSlow 3s ease-in-out infinite",
+        "shimmer":    "shimmer 1.5s infinite",
+        "progress":   "progressFill 1.2s cubic-bezier(0.4, 0, 0.2, 1) forwards",
+      },
+      keyframes: {
+        fadeIn:       { "0%": { opacity: "0" },                                         "100%": { opacity: "1" } },
+        fadeUp:       { "0%": { opacity: "0", transform: "translateY(16px)" },          "100%": { opacity: "1", transform: "translateY(0)" } },
+        slideIn:      { "0%": { opacity: "0", transform: "translateX(-12px)" },         "100%": { opacity: "1", transform: "translateX(0)" } },
+        scaleIn:      { "0%": { opacity: "0", transform: "scale(0.95)" },               "100%": { opacity: "1", transform: "scale(1)" } },
+        dropdownOpen: { "0%": { opacity: "0", transform: "scale(0.96) translateY(-4px)" }, "100%": { opacity: "1", transform: "scale(1) translateY(0)" } },
+        pulseSlow:    { "0%, 100%": { opacity: "1", transform: "scale(1)" },            "50%": { opacity: "0.7", transform: "scale(1.02)" } },
+        shimmer:      { "0%": { backgroundPosition: "-200% 0" },                        "100%": { backgroundPosition: "200% 0" } },
+        progressFill: { "from": { width: "0%" },                                        "to": { width: "var(--target-width)" } },
+      },
+      boxShadow: {
+        sm:       "0 1px 3px rgba(15, 23, 42, 0.06), 0 1px 2px rgba(15, 23, 42, 0.04)",
+        md:       "0 4px 16px rgba(15, 23, 42, 0.08), 0 2px 6px rgba(15, 23, 42, 0.04)",
+        lg:       "0 8px 32px rgba(15, 23, 42, 0.10), 0 4px 12px rgba(15, 23, 42, 0.05)",
+        xl:       "0 16px 48px rgba(15, 23, 42, 0.12), 0 8px 20px rgba(15, 23, 42, 0.06)",
+        blue:     "0 4px 24px rgba(37, 99, 235, 0.20)",
+        "blue-lg":"0 8px 40px rgba(37, 99, 235, 0.30)",
+        glass:    "0 8px 32px rgba(31, 38, 135, 0.07)",
+        "glass-hover": "0 12px 40px rgba(31, 38, 135, 0.12)",
+        soft:     "0 2px 15px -3px rgba(0,0,0,0.07), 0 10px 20px -2px rgba(0,0,0,0.04)",
+      },
+      borderRadius: {
+        "2xl": "16px",
+        "3xl": "24px",
+        "4xl": "32px",
+      },
+      transitionDelay: {
+        "75":  "75ms",
+        "100": "100ms",
+        "150": "150ms",
+        "200": "200ms",
+        "300": "300ms",
+        "400": "400ms",
+        "500": "500ms",
+      },
+    },
+  },
+  plugins: [],
+};
