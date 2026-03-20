@@ -19,7 +19,7 @@ Enter 8 health parameters. Receive an instant ML risk classification with SHAP-b
 
 ---
 
-![CardioAI Landing Page](https://i.imgur.com/placeholder.png)
+![CardioAI Landing Page](https://drive.google.com/file/d/1fziZib4aPM8shMbT2phj12V8xD3A867t/view)
 
 </div>
 
@@ -450,7 +450,7 @@ JWT_SECRET=your-super-secret-key-change-me-in-production
 ### 1 — Clone the repository
 
 ```bash
-git clone https://github.com/RithwikBandi/heart-risk-ai.git
+git clone https://github.com/RithwikBandi/Heart-Risk-AI.git
 cd "heart-risk-ai"
 ```
 
@@ -689,7 +689,7 @@ CardioAI uses a **class-based** dark mode strategy (Tailwind `darkMode: "class"`
 
 ## Contributing
 
-This project was developed as a Final Year Computer Science project. Contributions, suggestions, and issues are welcome.
+This project was developed as a top-tier web application. Contributions, suggestions, and feedback are welcome.
 
 ```bash
 # Fork the repo, then:
@@ -707,8 +707,8 @@ git push origin feature/your-feature-name
 
 ## Author
 
-**Rithwik Reddy (Ricky)**  
-Final Year Computer Science Student
+**Rithwik Bandi (Ricky)**  
+Computer Science Student
 
 - GitHub: [@RithwikBandi](https://github.com/RithwikBandi)
 
@@ -716,7 +716,7 @@ Final Year Computer Science Student
 
 <div align="center">
 
-**CardioAI** · Final Year Computer Science Project · Built with ❤️ by Rithwik (Ricky)
+**CardioAI** · Heart Risk Prediction · Built with ❤️ by Rithwik (Ricky)
 
 *For educational and research purposes only. Not a substitute for professional medical advice.*
 
