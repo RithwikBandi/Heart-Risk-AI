@@ -332,7 +332,7 @@ export default function LandingPage() {
 
       {/* ── Hero ──────────────────────────────────────────── */}
       <section
-        className="relative overflow-hidden pt-36 pb-24 px-4 sm:px-6"
+        className="relative overflow-hidden pt-36 pb-0 px-4 sm:px-6"
         style={{ background: "linear-gradient(160deg, #0f172a 0%, #1e3a8a 55%, #1d4ed8 100%)" }}
       >
         {/* Background blobs */}
@@ -389,7 +389,7 @@ export default function LandingPage() {
           </div>
 
           {/* Risk labels */}
-          <div className="flex items-center justify-center gap-3 mt-12 animate-fade-up" style={{ animationDelay: "400ms" }}>
+          <div className="flex items-center justify-center gap-3 mt-12 mb-16 animate-fade-up" style={{ animationDelay: "400ms" }}>
             {[
               { label: "Low Risk",      color: "#10b981", bg: "rgba(16,185,129,0.12)" },
               { label: "Moderate Risk", color: "#f59e0b", bg: "rgba(245,158,11,0.12)" },
@@ -405,16 +405,16 @@ export default function LandingPage() {
         </div>
 
         {/* ── Wave divider — fill matches page bg in both modes ── */}
-        <div className="absolute bottom-0 inset-x-0">
+        <div className="absolute bottom-0 inset-x-0 leading-none" style={{ lineHeight: 0, fontSize: 0 }}>
           <svg
-            viewBox="0 0 1440 60"
+            viewBox="0 0 1440 80"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            className="w-full block"
+            style={{ display: "block", width: "100%", height: "80px" }}
             preserveAspectRatio="none"
           >
             <path
-              d="M0 60L60 50C120 40 240 20 360 15C480 10 600 20 720 25C840 30 960 30 1080 25C1200 20 1320 10 1380 5L1440 0V60H0Z"
+              d="M0 80L60 67C120 53 240 27 360 20C480 13 600 27 720 33C840 40 960 40 1080 33C1200 27 1320 13 1380 7L1440 0V80H0Z"
               fill={isDark ? "#0a0f1e" : "#f8fafc"}
             />
           </svg>
@@ -422,7 +422,10 @@ export default function LandingPage() {
       </section>
 
       {/* ── Stats ─────────────────────────────────────────── */}
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 -mt-1 pb-16">
+      <section
+        className="max-w-6xl mx-auto px-4 sm:px-6 pb-16"
+        style={{ marginTop: 0, paddingTop: "24px" }}
+      >
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {[
             { value: "5,500", label: "Training Records", sub: "patient dataset"          },
