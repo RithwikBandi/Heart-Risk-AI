@@ -34,7 +34,7 @@ export default function ProfilePage() {
   const TIPS = [
     { icon: "📋", text: "Use the Predict page to run a new cardiovascular risk assessment." },
     { icon: "📈", text: "Check History to track how your risk metrics change over time." },
-    { icon: "📚", text: "Visit Resources to explore the research behind the AI model." },
+    { icon: "📚", text: "Visit Resources to explore the research behind the predictive model." },
     { icon: "⚠️", text: "This tool is for educational purposes only — not a medical diagnosis." },
   ];
 
@@ -94,7 +94,7 @@ export default function ProfilePage() {
       {/* Tips / usage guide */}
       <div className="card p-6">
         <h3 className="font-display font-semibold text-slate-800 text-sm mb-4">
-          Getting the most from CardioAI
+          Getting the most from CardioML
         </h3>
         <div className="space-y-3">
           {TIPS.map(({ icon, text }, i) => (

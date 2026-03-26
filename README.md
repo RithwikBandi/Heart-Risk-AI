@@ -1,10 +1,10 @@
 <div align="center">
 
-<img src="frontend/public/favicon.svg" width="64" height="64" alt="CardioAI Logo" />
+<img src="frontend/public/favicon.svg" width="64" height="64" alt="CardioML Logo" />
 
-# CardioAI — Cardiovascular Risk Prediction System
+# CardioML — Cardiovascular Risk Prediction System
 
-**An end-to-end AI-powered clinical decision-support application.**  
+**An end-to-end Machine Learning-powered clinical decision-support application.**  
 Enter 8 health parameters. Receive an instant ML risk classification with SHAP-based explainability.
 
 [![Python](https://img.shields.io/badge/Python-3.11%2B-3776AB?style=flat-square&logo=python&logoColor=white)](https://python.org)
@@ -14,6 +14,7 @@ Enter 8 health parameters. Receive an instant ML risk classification with SHAP-b
 [![Scikit-learn](https://img.shields.io/badge/scikit--learn-1.8-F7931E?style=flat-square&logo=scikitlearn&logoColor=white)](https://scikit-learn.org)
 [![TailwindCSS](https://img.shields.io/badge/Tailwind-3.4-38BDF8?style=flat-square&logo=tailwindcss&logoColor=white)](https://tailwindcss.com)
 [![License](https://img.shields.io/badge/License-Academic-6366F1?style=flat-square)](./LICENSE)
+[![Final Year Project](https://img.shields.io/badge/Final%20Year%20Project-Academic-FFD700?style=flat-square)](#)
 
 </div>
 
@@ -47,7 +48,7 @@ Enter 8 health parameters. Receive an instant ML risk classification with SHAP-b
 
 ## Overview
 
-**CardioAI** is a full-stack, production-grade AI application for cardiovascular risk assessment. It accepts a patient's clinical inputs (age, BMI, blood pressure, cholesterol, and lifestyle factors) and returns a **Low / Moderate / High** risk classification — backed by a Logistic Regression model trained on 5,500 clinical records, with SHAP explainability surfacing the reasoning behind every prediction.
+**CardioML** is a full-stack, production-grade predictive modeling application for cardiovascular risk assessment. It accepts a patient's clinical inputs (age, BMI, blood pressure, cholesterol, and lifestyle factors) and returns a **Low / Moderate / High** risk classification — backed by a Logistic Regression model trained on 5,500 clinical records, with SHAP explainability surfacing the reasoning behind every prediction.
 
 This project demonstrates a complete **machine learning deployment pipeline** — from raw dataset validation and iterative model experimentation through to a REST API backend, React SaaS frontend, JWT authentication, and MongoDB persistence.
 
@@ -135,7 +136,7 @@ This project demonstrates a complete **machine learning deployment pipeline** �
 ## Project Structure
 
 ```
-Heart Risk AI/
+Heart Risk ML/
 │
 ├── backend/                        # FastAPI application
 │   ├── main.py                     # App factory, CORS, startup/shutdown, /predict endpoint
@@ -416,8 +417,8 @@ Create a `.env` file in the `backend/` directory:
 
 ```env
 # ── MongoDB ───────────────────────────────────────────────
-MONGO_URI=mongodb://localhost:27017/heart_risk_ai
-MONGO_DB_NAME=heart_risk_ai
+MONGO_URI=mongodb://localhost:27017/heart_risk_ml
+MONGO_DB_NAME=heart_risk_ml
 
 # ── JWT ───────────────────────────────────────────────────
 # Change this to a long random secret in any non-local environment
@@ -551,7 +552,7 @@ There is no admin registration UI by design. To promote a user to admin, connect
 mongosh
 
 # Switch to the app database
-use heart_risk_ai
+use heart_risk_ml
 
 # Promote a user by email
 db.users.updateOne(
@@ -653,7 +654,7 @@ get_current_user() / get_current_user_optional()
 
 ## Dark Mode Implementation
 
-CardioAI uses a **class-based** dark mode strategy (Tailwind `darkMode: "class"`).
+CardioML uses a **class-based** dark mode strategy (Tailwind `darkMode: "class"`).
 
 **How it works:**
 
@@ -710,7 +711,7 @@ Computer Science Student
 
 <div align="center">
 
-**CardioAI** · Heart Risk Prediction · Built with ❤️ by Rithwik (Ricky)
+**CardioML** · Heart Risk Prediction · Built with ❤️ by Rithwik (Ricky)
 
 *For educational and research purposes only. Not a substitute for professional medical advice.*
 

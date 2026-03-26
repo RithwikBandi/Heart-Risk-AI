@@ -63,7 +63,7 @@ const FEATURES = [
       </svg>
     ),
     title: "Admin Dashboard",
-    desc: "Real-time analytics — prediction volume, risk distribution charts, and user activity monitoring.",
+    desc: "Real-time analytics prediction volume, risk distribution charts, and user activity monitoring.",
     color: "sky",
   },
 ];
@@ -132,11 +132,11 @@ const JOURNEY_STEPS = [
 ];
 
 const MODEL_COMPARISON = [
-  { model: "Logistic Regression", accuracy: "95.09%", bar: 95, selected: true  },
-  { model: "Random Forest",       accuracy: "~91%",   bar: 91, selected: false },
-  { model: "Gradient Boosting",   accuracy: "~90%",   bar: 90, selected: false },
-  { model: "XGBoost",             accuracy: "~89%",   bar: 89, selected: false },
-  { model: "ANN",                 accuracy: "~88%",   bar: 88, selected: false },
+  { model: "Logistic Regression", accuracy: "95.09%", bar: 95, selected: true },
+  { model: "Random Forest", accuracy: "~91%", bar: 91, selected: false },
+  { model: "Gradient Boosting", accuracy: "~90%", bar: 90, selected: false },
+  { model: "XGBoost", accuracy: "~89%", bar: 89, selected: false },
+  { model: "ANN", accuracy: "~88%", bar: 88, selected: false },
 ];
 
 const RESOURCES = [
@@ -191,18 +191,18 @@ const RESOURCES = [
 ];
 
 const STEPS = [
-  { num: "01", title: "Enter health metrics",    desc: "Input age, BMI, blood pressure, cholesterol, smoking status, activity level, and stress score." },
-  { num: "02", title: "AI analyzes your profile", desc: "The ML model processes your clinical data against learned cardiovascular patterns." },
-  { num: "03", title: "Receive your assessment",  desc: "Get Low / Moderate / High risk with key drivers, protective factors, and recommendations." },
+  { num: "01", title: "Enter health metrics", desc: "Input age, BMI, blood pressure, cholesterol, smoking status, activity level, and stress score." },
+  { num: "02", title: "ML analyzes your profile", desc: "The ML model processes your clinical data against learned cardiovascular patterns." },
+  { num: "03", title: "Receive your assessment", desc: "Get Low / Moderate / High risk with key drivers, protective factors, and recommendations." },
 ];
 
 const colorMap = {
-  blue:    { bg: "bg-blue-50 dark:bg-blue-950/40",    text: "text-blue-600 dark:text-blue-400",    ring: "ring-blue-100 dark:ring-blue-900/50"    },
-  violet:  { bg: "bg-violet-50 dark:bg-violet-950/40", text: "text-violet-600 dark:text-violet-400", ring: "ring-violet-100 dark:ring-violet-900/50" },
-  emerald: { bg: "bg-emerald-50 dark:bg-emerald-950/40",text:"text-emerald-600 dark:text-emerald-400",ring:"ring-emerald-100 dark:ring-emerald-900/50"},
-  amber:   { bg: "bg-amber-50 dark:bg-amber-950/40",   text: "text-amber-600 dark:text-amber-400",   ring: "ring-amber-100 dark:ring-amber-900/50"   },
-  rose:    { bg: "bg-rose-50 dark:bg-rose-950/40",     text: "text-rose-600 dark:text-rose-400",     ring: "ring-rose-100 dark:ring-rose-900/50"     },
-  sky:     { bg: "bg-sky-50 dark:bg-sky-950/40",       text: "text-sky-600 dark:text-sky-400",       ring: "ring-sky-100 dark:ring-sky-900/50"       },
+  blue: { bg: "bg-blue-50 dark:bg-blue-950/40", text: "text-blue-600 dark:text-blue-400", ring: "ring-blue-100 dark:ring-blue-900/50" },
+  violet: { bg: "bg-violet-50 dark:bg-violet-950/40", text: "text-violet-600 dark:text-violet-400", ring: "ring-violet-100 dark:ring-violet-900/50" },
+  emerald: { bg: "bg-emerald-50 dark:bg-emerald-950/40", text: "text-emerald-600 dark:text-emerald-400", ring: "ring-emerald-100 dark:ring-emerald-900/50" },
+  amber: { bg: "bg-amber-50 dark:bg-amber-950/40", text: "text-amber-600 dark:text-amber-400", ring: "ring-amber-100 dark:ring-amber-900/50" },
+  rose: { bg: "bg-rose-50 dark:bg-rose-950/40", text: "text-rose-600 dark:text-rose-400", ring: "ring-rose-100 dark:ring-rose-900/50" },
+  sky: { bg: "bg-sky-50 dark:bg-sky-950/40", text: "text-sky-600 dark:text-sky-400", ring: "ring-sky-100 dark:ring-sky-900/50" },
 };
 
 // ─── InView hook ─────────────────────────────────────────────────────────────
@@ -231,11 +231,11 @@ export default function LandingPage() {
   const [scrolled, setScrolled] = useState(false);
   const [showScrollTop, setShowScrollTop] = useState(false);
 
-  const [featRef,    featInView]    = useInView();
+  const [featRef, featInView] = useInView();
   const [journeyRef, journeyInView] = useInView();
-  const [stepsRef,   stepsInView]   = useInView();
-  const [resRef,     resInView]     = useInView();
-  const [aboutRef,   aboutInView]   = useInView();
+  const [stepsRef, stepsInView] = useInView();
+  const [resRef, resInView] = useInView();
+  const [aboutRef, aboutInView] = useInView();
 
   useEffect(() => {
     const onScroll = () => {
@@ -290,7 +290,7 @@ export default function LandingPage() {
                 className="font-display font-semibold text-sm tracking-tight transition-colors duration-300"
                 style={{ color: isDark ? "#f0f4ff" : "#0f172a" }}
               >
-                CardioAI
+                CardioML
               </span>
             </div>
 
@@ -344,7 +344,7 @@ export default function LandingPage() {
           <svg className="absolute inset-0 w-full h-full opacity-[0.04]" xmlns="http://www.w3.org/2000/svg">
             <defs>
               <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-                <path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" strokeWidth="0.5"/>
+                <path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" strokeWidth="0.5" />
               </pattern>
             </defs>
             <rect width="100%" height="100%" fill="url(#grid)" />
@@ -355,14 +355,14 @@ export default function LandingPage() {
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold mb-8 animate-fade-in"
             style={{ background: "rgba(255,255,255,0.1)", border: "1px solid rgba(255,255,255,0.2)", color: "#bfdbfe" }}>
             <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-            Heart-Risk-Prediction-AI · AI-Powered Healthcare
+            Heart-Risk-Prediction · ML-Based Healthcare · B.Tech Final Year Project
           </div>
 
           <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 animate-fade-up"
             style={{ animationDelay: "100ms" }}>
             Predict Cardiovascular<br />
             <span style={{ background: "linear-gradient(90deg, #60a5fa, #a78bfa)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>
-              Risk With AI
+              Risk With ML
             </span>
           </h1>
 
@@ -391,9 +391,9 @@ export default function LandingPage() {
           {/* Risk labels */}
           <div className="flex items-center justify-center gap-3 mt-12 mb-16 animate-fade-up" style={{ animationDelay: "400ms" }}>
             {[
-              { label: "Low Risk",      color: "#10b981", bg: "rgba(16,185,129,0.12)" },
+              { label: "Low Risk", color: "#10b981", bg: "rgba(16,185,129,0.12)" },
               { label: "Moderate Risk", color: "#f59e0b", bg: "rgba(245,158,11,0.12)" },
-              { label: "High Risk",     color: "#ef4444", bg: "rgba(239,68,68,0.12)"  },
+              { label: "High Risk", color: "#ef4444", bg: "rgba(239,68,68,0.12)" },
             ].map(({ label, color, bg }) => (
               <div key={label} className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold"
                 style={{ background: bg, border: `1px solid ${color}30`, color }}>
@@ -428,10 +428,10 @@ export default function LandingPage() {
       >
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {[
-            { value: "5,500", label: "Training Records", sub: "patient dataset"          },
-            { value: "~95%",  label: "Model Accuracy",   sub: "logistic regression"      },
-            { value: "8",     label: "Clinical Inputs",  sub: "health parameters"        },
-            { value: "5",     label: "Models Tested",    sub: "LR · RF · GB · XGB · ANN" },
+            { value: "5,500", label: "Training Records", sub: "patient dataset" },
+            { value: "~95%", label: "Model Accuracy", sub: "logistic regression" },
+            { value: "8", label: "Clinical Inputs", sub: "health parameters" },
+            { value: "5", label: "Models Tested", sub: "LR · RF · GB · XGB · ANN" },
           ].map(({ value, label, sub }) => (
             <div
               key={label}
@@ -646,9 +646,10 @@ export default function LandingPage() {
         <div className="relative">
           <div
             className="hidden md:block absolute top-12 left-1/2 -translate-x-1/2 w-[calc(100%-120px)] h-px"
-            style={{ background: isDark
-              ? "linear-gradient(90deg, transparent, rgba(59,130,246,0.3) 20%, rgba(59,130,246,0.3) 80%, transparent)"
-              : "linear-gradient(90deg, transparent, #bfdbfe 20%, #bfdbfe 80%, transparent)"
+            style={{
+              background: isDark
+                ? "linear-gradient(90deg, transparent, rgba(59,130,246,0.3) 20%, rgba(59,130,246,0.3) 80%, transparent)"
+                : "linear-gradient(90deg, transparent, #bfdbfe 20%, #bfdbfe 80%, transparent)"
             }}
           />
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -715,7 +716,7 @@ export default function LandingPage() {
               className="text-base max-w-md mx-auto transition-colors duration-300"
               style={{ color: isDark ? "#8b9cc8" : "#64748b" }}
             >
-              Every dataset, notebook, and model used to build CardioAI — fully open for review.
+              Every dataset, notebook, and model used to build CardioML — fully open for review.
             </p>
           </div>
 
@@ -757,7 +758,7 @@ export default function LandingPage() {
                 <div className="flex items-center gap-1 text-xs font-semibold transition-colors duration-200" style={{ color }}>
                   Open link
                   <svg viewBox="0 0 16 16" fill="currentColor" className="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-0.5">
-                    <path fillRule="evenodd" d="M4.22 11.78a.75.75 0 010-1.06L9.44 5.5H5.75a.75.75 0 010-1.5h5.5a.75.75 0 01.75.75v5.5a.75.75 0 01-1.5 0V6.56l-5.22 5.22a.75.75 0 01-1.06 0z" clipRule="evenodd"/>
+                    <path fillRule="evenodd" d="M4.22 11.78a.75.75 0 010-1.06L9.44 5.5H5.75a.75.75 0 010-1.5h5.5a.75.75 0 01.75.75v5.5a.75.75 0 01-1.5 0V6.56l-5.22 5.22a.75.75 0 01-1.06 0z" clipRule="evenodd" />
                   </svg>
                 </div>
               </a>
@@ -782,13 +783,13 @@ export default function LandingPage() {
             }}>
               <p className="text-blue-300 text-xs font-semibold uppercase tracking-widest mb-4">About</p>
               <h2 className="font-display text-2xl sm:text-3xl font-bold text-white mb-4 leading-tight">
-                Heart Risk Prediction AI by<br />
+                Heart Risk Predictive Model by<br />
                 <span style={{ background: "linear-gradient(90deg, #60a5fa, #a78bfa)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>
                   Rithwik (Ricky)
                 </span>
               </h2>
               <p className="text-blue-100/70 text-sm leading-relaxed mb-4">
-                An end-to-end AI-powered cardiovascular risk prediction system — combining a trained ML model, FastAPI REST backend, MongoDB database, and React frontend into a complete clinical decision-support application.
+                An end-to-end Machine Learning-based cardiovascular risk prediction system combining a trained ML model, FastAPI REST backend, MongoDB database, and React frontend into a complete clinical decision-support application. Developed as an Undergraduate Capstone / Final Year Project.
               </p>
               <a
                 href="https://github.com/RithwikBandi/Heart-Risk-AI"
@@ -798,7 +799,7 @@ export default function LandingPage() {
                 style={{ background: "rgba(255,255,255,0.1)", border: "1px solid rgba(255,255,255,0.2)", color: "white" }}
               >
                 <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4">
-                  <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+                  <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
                 </svg>
                 View on GitHub
               </a>
@@ -812,12 +813,12 @@ export default function LandingPage() {
               }}
             >
               {[
-                { tech: "React + Vite", role: "Frontend"       },
-                { tech: "FastAPI",      role: "Backend API"    },
-                { tech: "Scikit-learn", role: "ML Model"       },
-                { tech: "MongoDB",      role: "Database"       },
-                { tech: "JWT Auth",     role: "Security"       },
-                { tech: "SHAP",         role: "Explainability" },
+                { tech: "React + Vite", role: "Frontend" },
+                { tech: "FastAPI", role: "Backend API" },
+                { tech: "Scikit-learn", role: "ML Model" },
+                { tech: "MongoDB", role: "Database" },
+                { tech: "JWT Auth", role: "Security" },
+                { tech: "SHAP", role: "Explainability" },
               ].map(({ tech, role }) => (
                 <div
                   key={tech}
@@ -854,19 +855,19 @@ export default function LandingPage() {
               className="font-display text-sm font-semibold transition-colors duration-300"
               style={{ color: isDark ? "#f0f4ff" : "#0f172a" }}
             >
-              CardioAI
+              CardioML
             </span>
           </div>
           <p
             className="text-xs text-center transition-colors duration-300"
             style={{ color: isDark ? "#4a5880" : "#94a3b8" }}
           >
-            © 2025 Heart Risk Prediction AI · Final Year Project · Built by Rithwik (Ricky)
+            © 2025 Heart Risk Prediction Model · Final Year Project · Built by Rithwik (Ricky)
           </p>
           <div className="flex items-center gap-5 text-xs transition-colors duration-300" style={{ color: isDark ? "#4a5880" : "#94a3b8" }}>
             <Link to="/case-study" className="hover:text-blue-500 transition-colors">Case Study</Link>
-            <Link to="/login"      className="hover:text-blue-500 transition-colors">Sign in</Link>
-            <Link to="/register"   className="hover:text-blue-500 transition-colors">Register</Link>
+            <Link to="/login" className="hover:text-blue-500 transition-colors">Sign in</Link>
+            <Link to="/register" className="hover:text-blue-500 transition-colors">Register</Link>
           </div>
         </div>
       </footer>
@@ -875,13 +876,12 @@ export default function LandingPage() {
       <button
         onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         aria-label="Scroll to top"
-        className={`fixed bottom-6 right-6 z-50 w-10 h-10 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 ${
-          showScrollTop ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 pointer-events-none"
-        }`}
+        className={`fixed bottom-6 right-6 z-50 w-10 h-10 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 ${showScrollTop ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 pointer-events-none"
+          }`}
         style={{ background: "linear-gradient(135deg, #2563eb, #1d4ed8)", boxShadow: "0 4px 16px rgba(37,99,235,0.4)" }}
       >
         <svg viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 text-white">
-          <path fillRule="evenodd" d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z" clipRule="evenodd"/>
+          <path fillRule="evenodd" d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z" clipRule="evenodd" />
         </svg>
       </button>
     </div>

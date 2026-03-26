@@ -90,7 +90,7 @@ export default function AppLayout({ children }) {
                 className="font-display font-semibold tracking-tight transition-all duration-300 text-slate-900 dark:text-white"
                 style={{ fontSize: scrolled ? "13px" : "14px" }}
               >
-                CardioAI
+                CardioML
               </span>
             </Link>
 
@@ -201,7 +201,7 @@ export default function AppLayout({ children }) {
       <footer className="max-w-6xl mx-auto px-4 sm:px-6 py-6 mt-8 border-t border-slate-100 dark:border-slate-800">
         <div className="flex flex-col sm:flex-row items-center justify-between gap-2">
           <p className="text-xs text-slate-400 dark:text-slate-500">
-            CardioAI · Final Year CS Project · For educational purposes only
+            CardioML · Final Year CS Project · For educational purposes only
           </p>
           <Link to="/case-study" className="text-xs text-blue-500 hover:text-blue-700 dark:hover:text-blue-300 transition-colors">
             View Case Study →

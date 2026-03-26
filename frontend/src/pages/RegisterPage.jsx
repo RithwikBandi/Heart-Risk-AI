@@ -64,7 +64,7 @@ export default function RegisterPage() {
             </svg>
           </div>
           <span className="font-display font-semibold text-sm" style={{ color: "var(--text-primary)" }}>
-            CardioAI
+            CardioML
           </span>
         </Link>
         <Link to="/login" className="text-sm transition-colors" style={{ color: "var(--text-secondary)" }}>

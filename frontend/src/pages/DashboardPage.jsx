@@ -65,7 +65,7 @@ export default function DashboardPage() {
             {firstName} 👋
           </h1>
           <p className="text-blue-100/70 text-sm max-w-md">
-            Use CardioAI to run a cardiovascular risk assessment. Results include risk level, contributing factors, and personalised health recommendations.
+            Use CardioML to run a cardiovascular risk assessment. Results include risk level, contributing factors, and personalised health recommendations.
           </p>
         </div>
       </div>
@@ -137,7 +137,7 @@ export default function DashboardPage() {
           </div>
           <h3 className="font-display font-semibold text-slate-900 mb-1.5">New Assessment</h3>
           <p className="text-slate-500 text-sm mb-5 leading-relaxed">
-            Run a new AI-powered cardiovascular risk prediction. Enter 8 clinical health parameters to get your risk level and personalized insights.
+            Run a new ML-based cardiovascular risk prediction. Enter 8 clinical health parameters to get your risk level and personalized insights.
           </p>
           <Link
             to="/app/predict"
@@ -184,7 +184,7 @@ export default function DashboardPage() {
         <div>
           <p className="text-sm font-semibold text-sky-900 mb-0.5">Educational tool only</p>
           <p className="text-xs text-sky-700 leading-relaxed">
-            This AI system provides cardiovascular risk estimates for research and educational purposes. Always consult a qualified healthcare professional for medical advice.
+            This predictive model provides cardiovascular risk estimates for research and educational purposes. Always consult a qualified healthcare professional for medical advice.
           </p>
         </div>
       </div>

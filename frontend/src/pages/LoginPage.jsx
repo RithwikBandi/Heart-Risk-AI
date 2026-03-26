@@ -51,7 +51,7 @@ export default function LoginPage() {
             </svg>
           </div>
           <span className="font-display font-semibold text-sm" style={{ color: "var(--text-primary)" }}>
-            CardioAI
+            CardioML
           </span>
         </Link>
         <Link to="/register" className="text-sm transition-colors" style={{ color: "var(--text-secondary)" }}>
@@ -81,7 +81,7 @@ export default function LoginPage() {
                 Welcome back
               </h1>
               <p className="text-sm" style={{ color: "var(--text-secondary)" }}>
-                Sign in to your CardioAI account
+                Sign in to your CardioML account
               </p>
             </div>
 
@@ -174,7 +174,7 @@ export default function LoginPage() {
             </form>
 
             <p className="mt-6 text-center text-sm" style={{ color: "var(--text-secondary)" }}>
-              New to CardioAI?{" "}
+              New to CardioML?{" "}
               <Link to="/register" className="font-semibold text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors">
                 Create an account
               </Link>

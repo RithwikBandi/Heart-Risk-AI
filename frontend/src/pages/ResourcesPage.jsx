@@ -96,7 +96,7 @@ export default function ResourcesPage() {
                 <path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
               </svg>
             </div>
-            <span className="font-display font-semibold text-slate-900 text-sm">CardioAI</span>
+            <span className="font-display font-semibold text-slate-900 text-sm">CardioML</span>
           </Link>
           <div className="flex items-center gap-3">
             <Link to="/" className="text-xs text-slate-500 hover:text-slate-800 transition-colors">← Home</Link>
@@ -119,7 +119,7 @@ export default function ResourcesPage() {
             Project Resources
           </h1>
           <p className="text-slate-500 text-base max-w-xl mx-auto leading-relaxed">
-            Every dataset, notebook, and model used to build CardioAI — fully open for review. Built with research rigour for academic and practical credibility.
+            Every dataset, notebook, and model used to build CardioML — fully open for review. Built with research rigour for academic and practical credibility.
           </p>
         </div>
 
@@ -234,7 +234,7 @@ export default function ResourcesPage() {
       <footer className="border-t border-slate-200 bg-white mt-16">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-6 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-xs text-slate-400">
-            CardioAI · Final Year Project · Rithwik (Ricky) · 2025
+            CardioML · Final Year Project · Rithwik (Ricky) · 2025
           </p>
           <div className="flex items-center gap-4 text-xs text-slate-400">
             <Link to="/" className="hover:text-slate-700 transition-colors">Home</Link>
